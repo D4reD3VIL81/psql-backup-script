@@ -1,6 +1,6 @@
 from celery import Celery
 from celery.schedules import crontab
-from backup_psql import backup_postgresql_data
+from .main import backup_postgresql_data
 
 app = Celery("backup_task", broker="redis://redis:6379/0")
 
